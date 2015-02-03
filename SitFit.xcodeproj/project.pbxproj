@@ -8,11 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		2942CF241A810FB300138CC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942CF231A810FB300138CC5 /* AppDelegate.swift */; };
-		2942CF261A810FB300138CC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942CF251A810FB300138CC5 /* ViewController.swift */; };
+		2942CF261A810FB300138CC5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942CF251A810FB300138CC5 /* LoginViewController.swift */; };
 		2942CF291A810FB300138CC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2942CF271A810FB300138CC5 /* Main.storyboard */; };
 		2942CF2B1A810FB300138CC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2942CF2A1A810FB300138CC5 /* Images.xcassets */; };
 		2942CF2E1A810FB300138CC5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2942CF2C1A810FB300138CC5 /* LaunchScreen.xib */; };
 		2942CF3A1A810FB300138CC5 /* SitFitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942CF391A810FB300138CC5 /* SitFitTests.swift */; };
+		2942CF4B1A81173300138CC5 /* NewSeat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2942CF491A81173300138CC5 /* NewSeat.storyboard */; };
+		2942CF4F1A81310700138CC5 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942CF4E1A81310700138CC5 /* FeedTableViewController.swift */; };
+		2942CF511A81314400138CC5 /* MyFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942CF501A81314400138CC5 /* MyFeedTableViewController.swift */; };
+		2942CF531A81520A00138CC5 /* NewSeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942CF521A81520A00138CC5 /* NewSeatViewController.swift */; };
+		2942CF5A1A81548E00138CC5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF551A81548E00138CC5 /* Bolts.framework */; };
+		2942CF5B1A81548E00138CC5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF561A81548E00138CC5 /* Parse.framework */; };
+		2942CF5C1A81548E00138CC5 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF571A81548E00138CC5 /* ParseCrashReporting.framework */; };
+		2942CF5D1A81548E00138CC5 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF581A81548E00138CC5 /* ParseFacebookUtils.framework */; };
+		2942CF5E1A81548E00138CC5 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF591A81548E00138CC5 /* ParseUI.framework */; };
+		2942CF631A81571800138CC5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF621A81571800138CC5 /* AudioToolbox.framework */; };
+		2942CF671A81574700138CC5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF661A81574700138CC5 /* MobileCoreServices.framework */; };
+		2942CF691A81575C00138CC5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF681A81575C00138CC5 /* SystemConfiguration.framework */; };
+		2942CF6B1A81577800138CC5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF6A1A81577800138CC5 /* libsqlite3.dylib */; };
+		2942CF6F1A815B7700138CC5 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942CF6E1A815B7700138CC5 /* FeedData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +43,30 @@
 		2942CF1E1A810FB300138CC5 /* SitFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SitFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2942CF221A810FB300138CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2942CF231A810FB300138CC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2942CF251A810FB300138CC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2942CF251A810FB300138CC5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2942CF281A810FB300138CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2942CF2A1A810FB300138CC5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2942CF2D1A810FB300138CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2942CF331A810FB300138CC5 /* SitFitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SitFitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2942CF381A810FB300138CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2942CF391A810FB300138CC5 /* SitFitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitFitTests.swift; sourceTree = "<group>"; };
+		2942CF431A81116600138CC5 /* Architecture.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Architecture.md; sourceTree = "<group>"; };
+		2942CF4A1A81173300138CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NewSeat.storyboard; sourceTree = "<group>"; };
+		2942CF4E1A81310700138CC5 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		2942CF501A81314400138CC5 /* MyFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFeedTableViewController.swift; sourceTree = "<group>"; };
+		2942CF521A81520A00138CC5 /* NewSeatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSeatViewController.swift; sourceTree = "<group>"; };
+		2942CF551A81548E00138CC5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		2942CF561A81548E00138CC5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		2942CF571A81548E00138CC5 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		2942CF581A81548E00138CC5 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		2942CF591A81548E00138CC5 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		2942CF5F1A81550400138CC5 /* SitFit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SitFit-Bridging-Header.h"; sourceTree = "<group>"; };
+		2942CF621A81571800138CC5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2942CF641A81573200138CC5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2942CF661A81574700138CC5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2942CF681A81575C00138CC5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2942CF6A1A81577800138CC5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		2942CF6E1A815B7700138CC5 /* FeedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +74,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2942CF6B1A81577800138CC5 /* libsqlite3.dylib in Frameworks */,
+				2942CF691A81575C00138CC5 /* SystemConfiguration.framework in Frameworks */,
+				2942CF671A81574700138CC5 /* MobileCoreServices.framework in Frameworks */,
+				2942CF631A81571800138CC5 /* AudioToolbox.framework in Frameworks */,
+				2942CF5B1A81548E00138CC5 /* Parse.framework in Frameworks */,
+				2942CF5C1A81548E00138CC5 /* ParseCrashReporting.framework in Frameworks */,
+				2942CF5E1A81548E00138CC5 /* ParseUI.framework in Frameworks */,
+				2942CF5D1A81548E00138CC5 /* ParseFacebookUtils.framework in Frameworks */,
+				2942CF5A1A81548E00138CC5 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +102,7 @@
 				2942CF201A810FB300138CC5 /* SitFit */,
 				2942CF361A810FB300138CC5 /* SitFitTests */,
 				2942CF1F1A810FB300138CC5 /* Products */,
+				2942CF541A81543100138CC5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +118,12 @@
 		2942CF201A810FB300138CC5 /* SitFit */ = {
 			isa = PBXGroup;
 			children = (
-				2942CF231A810FB300138CC5 /* AppDelegate.swift */,
-				2942CF251A810FB300138CC5 /* ViewController.swift */,
-				2942CF271A810FB300138CC5 /* Main.storyboard */,
-				2942CF2A1A810FB300138CC5 /* Images.xcassets */,
-				2942CF2C1A810FB300138CC5 /* LaunchScreen.xib */,
+				2942CF6D1A815B1E00138CC5 /* Models */,
+				2942CF4C1A81305D00138CC5 /* Main Feeds & Login */,
+				2942CF4D1A81307500138CC5 /* New Seat */,
 				2942CF211A810FB300138CC5 /* Supporting Files */,
+				2942CF431A81116600138CC5 /* Architecture.md */,
+				2942CF5F1A81550400138CC5 /* SitFit-Bridging-Header.h */,
 			);
 			path = SitFit;
 			sourceTree = "<group>";
@@ -90,6 +131,9 @@
 		2942CF211A810FB300138CC5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2942CF231A810FB300138CC5 /* AppDelegate.swift */,
+				2942CF2A1A810FB300138CC5 /* Images.xcassets */,
+				2942CF2C1A810FB300138CC5 /* LaunchScreen.xib */,
 				2942CF221A810FB300138CC5 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +154,51 @@
 				2942CF381A810FB300138CC5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2942CF4C1A81305D00138CC5 /* Main Feeds & Login */ = {
+			isa = PBXGroup;
+			children = (
+				2942CF251A810FB300138CC5 /* LoginViewController.swift */,
+				2942CF271A810FB300138CC5 /* Main.storyboard */,
+				2942CF4E1A81310700138CC5 /* FeedTableViewController.swift */,
+				2942CF501A81314400138CC5 /* MyFeedTableViewController.swift */,
+			);
+			name = "Main Feeds & Login";
+			sourceTree = "<group>";
+		};
+		2942CF4D1A81307500138CC5 /* New Seat */ = {
+			isa = PBXGroup;
+			children = (
+				2942CF491A81173300138CC5 /* NewSeat.storyboard */,
+				2942CF521A81520A00138CC5 /* NewSeatViewController.swift */,
+			);
+			name = "New Seat";
+			sourceTree = "<group>";
+		};
+		2942CF541A81543100138CC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2942CF6A1A81577800138CC5 /* libsqlite3.dylib */,
+				2942CF681A81575C00138CC5 /* SystemConfiguration.framework */,
+				2942CF661A81574700138CC5 /* MobileCoreServices.framework */,
+				2942CF641A81573200138CC5 /* CFNetwork.framework */,
+				2942CF621A81571800138CC5 /* AudioToolbox.framework */,
+				2942CF551A81548E00138CC5 /* Bolts.framework */,
+				2942CF561A81548E00138CC5 /* Parse.framework */,
+				2942CF571A81548E00138CC5 /* ParseCrashReporting.framework */,
+				2942CF581A81548E00138CC5 /* ParseFacebookUtils.framework */,
+				2942CF591A81548E00138CC5 /* ParseUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2942CF6D1A815B1E00138CC5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2942CF6E1A815B7700138CC5 /* FeedData.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2942CF4B1A81173300138CC5 /* NewSeat.storyboard in Resources */,
 				2942CF291A810FB300138CC5 /* Main.storyboard in Resources */,
 				2942CF2E1A810FB300138CC5 /* LaunchScreen.xib in Resources */,
 				2942CF2B1A810FB300138CC5 /* Images.xcassets in Resources */,
@@ -212,8 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2942CF261A810FB300138CC5 /* ViewController.swift in Sources */,
+				2942CF261A810FB300138CC5 /* LoginViewController.swift in Sources */,
+				2942CF511A81314400138CC5 /* MyFeedTableViewController.swift in Sources */,
 				2942CF241A810FB300138CC5 /* AppDelegate.swift in Sources */,
+				2942CF6F1A815B7700138CC5 /* FeedData.swift in Sources */,
+				2942CF531A81520A00138CC5 /* NewSeatViewController.swift in Sources */,
+				2942CF4F1A81310700138CC5 /* FeedTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +344,14 @@
 				2942CF2D1A810FB300138CC5 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		2942CF491A81173300138CC5 /* NewSeat.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2942CF4A1A81173300138CC5 /* Base */,
+			);
+			name = NewSeat.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -336,9 +438,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SitFit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SitFit/SitFit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -346,9 +455,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SitFit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SitFit/SitFit-Bridging-Header.h";
 			};
 			name = Release;
 		};
