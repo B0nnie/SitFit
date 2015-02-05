@@ -17,8 +17,6 @@
 		2942CF4F1A81310700138CC5 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942CF4E1A81310700138CC5 /* FeedTableViewController.swift */; };
 		2942CF511A81314400138CC5 /* MyFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942CF501A81314400138CC5 /* MyFeedTableViewController.swift */; };
 		2942CF531A81520A00138CC5 /* NewSeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942CF521A81520A00138CC5 /* NewSeatViewController.swift */; };
-		2942CF5A1A81548E00138CC5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF551A81548E00138CC5 /* Bolts.framework */; };
-		2942CF5B1A81548E00138CC5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF561A81548E00138CC5 /* Parse.framework */; };
 		2942CF5C1A81548E00138CC5 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF571A81548E00138CC5 /* ParseCrashReporting.framework */; };
 		2942CF5D1A81548E00138CC5 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF581A81548E00138CC5 /* ParseFacebookUtils.framework */; };
 		2942CF5E1A81548E00138CC5 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF591A81548E00138CC5 /* ParseUI.framework */; };
@@ -26,7 +24,9 @@
 		2942CF671A81574700138CC5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF661A81574700138CC5 /* MobileCoreServices.framework */; };
 		2942CF691A81575C00138CC5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF681A81575C00138CC5 /* SystemConfiguration.framework */; };
 		2942CF6B1A81577800138CC5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF6A1A81577800138CC5 /* libsqlite3.dylib */; };
-		2942CF6F1A815B7700138CC5 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942CF6E1A815B7700138CC5 /* FeedData.swift */; };
+		298F57921A826811002E9F56 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942CF6E1A815B7700138CC5 /* FeedData.swift */; };
+		298F57941A82681A002E9F56 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF551A81548E00138CC5 /* Bolts.framework */; };
+		298F57981A826900002E9F56 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942CF561A81548E00138CC5 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,14 +75,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2942CF6B1A81577800138CC5 /* libsqlite3.dylib in Frameworks */,
+				298F57981A826900002E9F56 /* Parse.framework in Frameworks */,
 				2942CF691A81575C00138CC5 /* SystemConfiguration.framework in Frameworks */,
 				2942CF671A81574700138CC5 /* MobileCoreServices.framework in Frameworks */,
 				2942CF631A81571800138CC5 /* AudioToolbox.framework in Frameworks */,
-				2942CF5B1A81548E00138CC5 /* Parse.framework in Frameworks */,
 				2942CF5C1A81548E00138CC5 /* ParseCrashReporting.framework in Frameworks */,
+				298F57941A82681A002E9F56 /* Bolts.framework in Frameworks */,
 				2942CF5E1A81548E00138CC5 /* ParseUI.framework in Frameworks */,
 				2942CF5D1A81548E00138CC5 /* ParseFacebookUtils.framework in Frameworks */,
-				2942CF5A1A81548E00138CC5 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +305,7 @@
 				2942CF261A810FB300138CC5 /* LoginViewController.swift in Sources */,
 				2942CF511A81314400138CC5 /* MyFeedTableViewController.swift in Sources */,
 				2942CF241A810FB300138CC5 /* AppDelegate.swift in Sources */,
-				2942CF6F1A815B7700138CC5 /* FeedData.swift in Sources */,
+				298F57921A826811002E9F56 /* FeedData.swift in Sources */,
 				2942CF531A81520A00138CC5 /* NewSeatViewController.swift in Sources */,
 				2942CF4F1A81310700138CC5 /* FeedTableViewController.swift in Sources */,
 			);
@@ -474,6 +474,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -493,6 +494,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SitFitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -520,6 +522,7 @@
 				2942CF3F1A810FB300138CC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2942CF401A810FB300138CC5 /* Build configuration list for PBXNativeTarget "SitFitTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +531,7 @@
 				2942CF421A810FB300138CC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

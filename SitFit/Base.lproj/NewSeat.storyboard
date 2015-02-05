@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2BN-SS-7T2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--New Seat View Controller-->
@@ -16,6 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q7h-Oe-EVu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="GlA-r5-kb7"/>
+                                    <constraint firstAttribute="height" constant="300" id="h2W-HS-0X9"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GlA-r5-kb7"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7k-C3-MQ7">
                                 <rect key="frame" x="20" y="540" width="270" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,24 +71,50 @@
                                     </mask>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EI-Ix-WvN">
+                                <rect key="frame" x="20" y="240" width="560" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kzx-6f-vJX"/>
+                                </constraints>
+                                <state key="normal" title="Take Picture">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePicture:" destination="2BN-SS-7T2" eventType="touchUpInside" id="Cpn-Ee-dk6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="8EI-Ix-WvN" firstAttribute="leading" secondItem="m6z-ur-hW5" secondAttribute="leading" constant="20" id="0ch-H7-RzG"/>
                             <constraint firstItem="Yjw-H7-M1Y" firstAttribute="top" secondItem="m6z-ur-hW5" secondAttribute="top" constant="107" id="0uW-pm-NsK"/>
                             <constraint firstItem="M7k-C3-MQ7" firstAttribute="leading" secondItem="m6z-ur-hW5" secondAttribute="leading" constant="20" id="13E-aV-uah"/>
+                            <constraint firstItem="Q7h-Oe-EVu" firstAttribute="leading" secondItem="m6z-ur-hW5" secondAttribute="leading" id="1iF-SW-pin"/>
                             <constraint firstAttribute="trailing" secondItem="Yjw-H7-M1Y" secondAttribute="trailing" constant="43" id="2fE-PR-fDt"/>
                             <constraint firstAttribute="trailing" secondItem="BCB-6I-2Lg" secondAttribute="trailing" constant="20" id="3QE-9a-BPP"/>
                             <constraint firstItem="BCB-6I-2Lg" firstAttribute="leading" secondItem="M7k-C3-MQ7" secondAttribute="trailing" constant="20" id="Ahi-Dn-oRI"/>
+                            <constraint firstAttribute="trailing" secondItem="8EI-Ix-WvN" secondAttribute="trailing" constant="20" id="E8d-ob-RDg"/>
+                            <constraint firstAttribute="trailing" secondItem="Q7h-Oe-EVu" secondAttribute="trailing" id="KPS-MJ-UnP"/>
                             <constraint firstItem="Yjw-H7-M1Y" firstAttribute="leading" secondItem="m6z-ur-hW5" secondAttribute="leading" constant="40" id="KhE-Fo-pLl"/>
                             <constraint firstAttribute="trailing" secondItem="Yjw-H7-M1Y" secondAttribute="trailing" constant="20" id="MGm-uz-agl"/>
+                            <constraint firstItem="8EI-Ix-WvN" firstAttribute="top" secondItem="m6z-ur-hW5" secondAttribute="top" constant="240" id="ONr-CL-dn5"/>
+                            <constraint firstItem="Q7h-Oe-EVu" firstAttribute="top" secondItem="m6z-ur-hW5" secondAttribute="top" id="Wlb-DM-Ayb"/>
                             <constraint firstItem="BCB-6I-2Lg" firstAttribute="width" secondItem="M7k-C3-MQ7" secondAttribute="width" id="bQ4-in-FdV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q7h-Oe-EVu" secondAttribute="trailing" id="eA3-0d-7Q8"/>
+                            <constraint firstItem="Q7h-Oe-EVu" firstAttribute="leading" secondItem="m6z-ur-hW5" secondAttribute="leadingMargin" id="jpI-It-EjX"/>
                             <constraint firstItem="Yjw-H7-M1Y" firstAttribute="leading" secondItem="m6z-ur-hW5" secondAttribute="leading" constant="20" id="lKy-B4-8QU"/>
                             <constraint firstItem="Yjw-H7-M1Y" firstAttribute="top" secondItem="m6z-ur-hW5" secondAttribute="top" constant="20" id="lSu-bT-uqW"/>
                             <constraint firstItem="oZ5-Yw-5ho" firstAttribute="top" secondItem="M7k-C3-MQ7" secondAttribute="bottom" constant="20" id="mhE-XF-4un"/>
                             <constraint firstItem="oZ5-Yw-5ho" firstAttribute="top" secondItem="BCB-6I-2Lg" secondAttribute="bottom" constant="20" id="of1-gc-9US"/>
+                            <constraint firstItem="Q7h-Oe-EVu" firstAttribute="top" secondItem="m6z-ur-hW5" secondAttribute="topMargin" id="vIs-Zk-0wP"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="eA3-0d-7Q8"/>
+                                <exclude reference="jpI-It-EjX"/>
+                                <exclude reference="vIs-Zk-0wP"/>
                                 <exclude reference="0uW-pm-NsK"/>
                                 <exclude reference="2fE-PR-fDt"/>
                                 <exclude reference="KhE-Fo-pLl"/>
@@ -83,6 +122,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="seatImageView" destination="Q7h-Oe-EVu" id="7lV-an-Ksn"/>
                         <outlet property="seatNameField" destination="Yjw-H7-M1Y" id="D2e-Jw-57K"/>
                     </connections>
                 </viewController>
