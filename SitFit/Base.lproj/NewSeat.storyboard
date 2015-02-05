@@ -85,6 +85,20 @@
                                     <action selector="takePicture:" destination="2BN-SS-7T2" eventType="touchUpInside" id="Cpn-Ee-dk6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h40-Hl-ghI">
+                                <rect key="frame" x="43" y="327" width="498" height="40"/>
+                                <color key="backgroundColor" red="0.13762560269999999" green="0.81441007720000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="V0u-FN-BM3"/>
+                                </constraints>
+                                <state key="normal" title="Select Venue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xVd-HA-vMc" kind="presentation" id="2pA-Yk-DR3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -96,17 +110,20 @@
                             <constraint firstAttribute="trailing" secondItem="BCB-6I-2Lg" secondAttribute="trailing" constant="20" id="3QE-9a-BPP"/>
                             <constraint firstItem="BCB-6I-2Lg" firstAttribute="leading" secondItem="M7k-C3-MQ7" secondAttribute="trailing" constant="20" id="Ahi-Dn-oRI"/>
                             <constraint firstAttribute="trailing" secondItem="8EI-Ix-WvN" secondAttribute="trailing" constant="20" id="E8d-ob-RDg"/>
+                            <constraint firstAttribute="trailing" secondItem="h40-Hl-ghI" secondAttribute="trailing" constant="59" id="IGl-dO-O0O"/>
                             <constraint firstAttribute="trailing" secondItem="Q7h-Oe-EVu" secondAttribute="trailing" id="KPS-MJ-UnP"/>
                             <constraint firstItem="Yjw-H7-M1Y" firstAttribute="leading" secondItem="m6z-ur-hW5" secondAttribute="leading" constant="40" id="KhE-Fo-pLl"/>
                             <constraint firstAttribute="trailing" secondItem="Yjw-H7-M1Y" secondAttribute="trailing" constant="20" id="MGm-uz-agl"/>
                             <constraint firstItem="8EI-Ix-WvN" firstAttribute="top" secondItem="m6z-ur-hW5" secondAttribute="top" constant="240" id="ONr-CL-dn5"/>
                             <constraint firstItem="Q7h-Oe-EVu" firstAttribute="top" secondItem="m6z-ur-hW5" secondAttribute="top" id="Wlb-DM-Ayb"/>
                             <constraint firstItem="BCB-6I-2Lg" firstAttribute="width" secondItem="M7k-C3-MQ7" secondAttribute="width" id="bQ4-in-FdV"/>
+                            <constraint firstItem="h40-Hl-ghI" firstAttribute="leading" secondItem="m6z-ur-hW5" secondAttribute="leading" constant="43" id="dec-g2-NmA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Q7h-Oe-EVu" secondAttribute="trailing" id="eA3-0d-7Q8"/>
                             <constraint firstItem="Q7h-Oe-EVu" firstAttribute="leading" secondItem="m6z-ur-hW5" secondAttribute="leadingMargin" id="jpI-It-EjX"/>
                             <constraint firstItem="Yjw-H7-M1Y" firstAttribute="leading" secondItem="m6z-ur-hW5" secondAttribute="leading" constant="20" id="lKy-B4-8QU"/>
                             <constraint firstItem="Yjw-H7-M1Y" firstAttribute="top" secondItem="m6z-ur-hW5" secondAttribute="top" constant="20" id="lSu-bT-uqW"/>
                             <constraint firstItem="oZ5-Yw-5ho" firstAttribute="top" secondItem="M7k-C3-MQ7" secondAttribute="bottom" constant="20" id="mhE-XF-4un"/>
+                            <constraint firstItem="h40-Hl-ghI" firstAttribute="top" secondItem="Q7h-Oe-EVu" secondAttribute="bottom" constant="27" id="oAY-mN-53d"/>
                             <constraint firstItem="oZ5-Yw-5ho" firstAttribute="top" secondItem="BCB-6I-2Lg" secondAttribute="bottom" constant="20" id="of1-gc-9US"/>
                             <constraint firstItem="Q7h-Oe-EVu" firstAttribute="top" secondItem="m6z-ur-hW5" secondAttribute="topMargin" id="vIs-Zk-0wP"/>
                         </constraints>
@@ -124,22 +141,23 @@
                     <connections>
                         <outlet property="seatImageView" destination="Q7h-Oe-EVu" id="7lV-an-Ksn"/>
                         <outlet property="seatNameField" destination="Yjw-H7-M1Y" id="D2e-Jw-57K"/>
+                        <outlet property="selectVenueButton" destination="h40-Hl-ghI" id="xqD-Rf-lIF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tmt-fS-Cqc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="492"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Venues-->
         <scene sceneID="hgR-SZ-pVS">
             <objects>
-                <tableViewController id="Ahz-xo-Z54" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VoC-PT-aeG">
+                <tableViewController id="Ahz-xo-Z54" customClass="VenuesTableViewController" customModule="SitFit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" sectionHeaderHeight="22" sectionFooterHeight="22" id="VoC-PT-aeG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eKF-pR-lmD">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="venueCell" rowHeight="77" id="eKF-pR-lmD">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eKF-pR-lmD" id="LtJ-kS-4dI">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -151,7 +169,7 @@
                             <outlet property="delegate" destination="Ahz-xo-Z54" id="D0T-OT-E20"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="eBa-51-vrM"/>
+                    <navigationItem key="navigationItem" title="Venues" id="eBa-51-vrM"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egq-te-MNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
