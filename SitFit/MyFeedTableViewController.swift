@@ -18,6 +18,8 @@ class MyFeedTableViewController: FeedTableViewController {
         FeedData.mainData().refreshMyFeedItems { () -> () in
             
             self.tableView.reloadData()
+            
+            
     }
     
     }

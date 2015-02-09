@@ -9,7 +9,13 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MyPointAnnotation: MKPointAnnotation {
+    
+    var index: Int = 0
+    
+}
+
+class MapViewController: UIViewController, MKMapViewDelegate {
 
     
     @IBOutlet weak var myMapView: MKMapView!
@@ -18,7 +24,13 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        myMapView.delegate = self
+
         // Do any additional setup after loading the view.
+        
+        let image = UIImage(named: "top_icon")
+        navigationItem.titleView = UIImageView(image: image)
+        
     }
 
    
@@ -44,7 +56,7 @@ class MapViewController: UIViewController {
     //coped this method from Maps project's ViewController
     func createAnnotationsWithSeats (seats: [PFObject]) {
         
-        for seat in seats {
+        for (i, seat) in enumerate (seats) {
             
             let venue = seat["venue"] as [String:AnyObject]
             
@@ -59,11 +71,10 @@ class MapViewController: UIViewController {
             
             let coordinate = CLLocationCoordinate2DMake(lat, lng)
             
-            let annotation = MKPointAnnotation()
-            
-            
+            let annotation = MyPointAnnotation()
+        
             annotation.title = seat["name"] as String
-            
+            annotation.index = i
             annotation.setCoordinate(coordinate)
             
             myMapView.addAnnotation(annotation)
@@ -73,8 +84,65 @@ class MapViewController: UIViewController {
         
     }
     
+func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
 
+    var annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "myAnn")
+    
+    var rightArrowButton = ArrowButton(frame: CGRectMake(0,0,22,22))
+    
 
+    rightArrowButton.strokeSize = 2
+    rightArrowButton.strokeColor = UIColor.redColor()
+    rightArrowButton.leftInset = 8
+    rightArrowButton.rightInset = 8
+    rightArrowButton.bottomInset = 5
+    rightArrowButton.topInset = 5
+    
+    annotationView.rightCalloutAccessoryView =  rightArrowButton
+    
+    annotationView.canShowCallout = true
+    
+    return annotationView
+    
+//    
+//    if !(annotation is CustomPointAnnotation) {
+//        return nil
+//    }
+//    
+//    let reuseId = "test"
+//    
+//    var anView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+//    if anView == nil {
+//        anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+//        anView.canShowCallout = true
+//    }
+//    else {
+//        anView.annotation = annotation
+//    }
+//    
+//    //Set annotation-specific properties **AFTER**
+//    //the view is dequeued or created...
+//    
+//    let cpa = annotation as CustomPointAnnotation
+//    anView.image = UIImage(named:cpa.imageName)
+//    
+//    return anView
+
+}
+    
+     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
+        
+        let index = (view.annotation as MyPointAnnotation).index
+        
+        FeedData.mainData().selectedSeat = FeedData.mainData().feedItems[index]
+        
+        let detailVC = storyboard?.instantiateViewControllerWithIdentifier("seatDetailVC") as UIViewController
+        
+        navigationController?.pushViewController(detailVC, animated:true)
+        
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

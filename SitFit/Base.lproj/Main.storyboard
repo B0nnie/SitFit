@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.13762560269999999" green="0.81441007720000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.31290843929108347" green="0.98282274913312406" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Veb-lG-yFB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="0ES-qm-moi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uGV-ow-skc" secondAttribute="trailing" id="1JG-9p-uoU"/>
@@ -71,10 +71,11 @@
             </objects>
             <point key="canvasLocation" x="281" y="196"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar Controller View-->
         <scene sceneID="BGE-AG-Nnh">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" id="AEy-hQ-XKX" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="AEy-hQ-XKX" customClass="TabBarControllerView" customModule="SitFit" customModuleProvider="target" sceneMemberID="viewController">
+                    <keyCommands/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="rmW-zU-IID">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -95,10 +96,11 @@
         <scene sceneID="MXM-Ea-SGD">
             <objects>
                 <navigationController id="jEw-jU-bcw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="lX9-eX-Yu9"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map_icon" id="lX9-eX-Yu9"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gHL-h6-bGI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.31290843930000001" green="0.9828227491" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="iz1-bv-YvR" kind="relationship" relationship="rootViewController" id="NLL-zi-fIH"/>
@@ -132,7 +134,9 @@
                             <constraint firstAttribute="trailing" secondItem="hG2-OF-pAg" secondAttribute="trailing" id="z7z-fK-rFU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0yx-yN-oyc"/>
+                    <navigationItem key="navigationItem" id="0yx-yN-oyc">
+                        <barButtonItem key="rightBarButtonItem" image="plus" id="cYW-Ar-yAZ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="myMapView" destination="hG2-OF-pAg" id="QFD-Bl-t1K"/>
                     </connections>
@@ -164,6 +168,32 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOa-RL-1Yj" customClass="ArrowButton" customModule="SitFit" customModuleProvider="target">
+                                            <rect key="frame" x="436" y="69" width="22" height="30"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="strokeSize">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                    <color key="value" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -189,10 +219,10 @@
             </objects>
             <point key="canvasLocation" x="2421" y="-138"/>
         </scene>
-        <!--View Controller-->
+        <!--Seat Detail View Controller-->
         <scene sceneID="HFb-PO-fUs">
             <objects>
-                <viewController id="9d2-ia-fET" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="seatDetailVC" id="9d2-ia-fET" customClass="SeatDetailViewController" customModule="SitFit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0wl-dC-kue"/>
                         <viewControllerLayoutGuide type="bottom" id="xZL-6D-t7H"/>
@@ -200,39 +230,37 @@
                     <view key="view" contentMode="scaleToFill" id="lGr-ib-9lT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FAr-BS-yvf">
+                                <rect key="frame" x="0.0" y="-251" width="607" height="499"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfg-pW-Ybb">
+                                <rect key="frame" x="58" y="277" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="seatImageView" destination="FAr-BS-yvf" id="i8a-HH-Ayy"/>
+                        <outlet property="seatNameLabel" destination="Xfg-pW-Ybb" id="Gw0-M1-EBM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ho-DM-J3f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3165" y="-138"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="uMn-lJ-vI4">
-            <objects>
-                <viewController id="luK-dY-6gu" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1XE-YM-VUr"/>
-                        <viewControllerLayoutGuide type="bottom" id="IJP-fd-kn7"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8Yf-Nb-m1N">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CcZ-If-Fsb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3236" y="666"/>
+            <point key="canvasLocation" x="1710" y="1396"/>
         </scene>
         <!--My Seats-->
         <scene sceneID="BXZ-gw-YnN">
             <objects>
                 <navigationController id="B3A-7b-ap2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Seats" id="dRs-GF-wbB"/>
+                    <tabBarItem key="tabBarItem" title="My Seats" image="my_list_icon" id="dRs-GF-wbB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pgI-38-qEw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.31290843930000001" green="0.9828227491" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="L7k-yf-C6J" kind="relationship" relationship="rootViewController" id="kN8-76-YBr"/>
@@ -270,7 +298,6 @@
                                 <connections>
                                     <outlet property="seatImageView" destination="ziz-lC-eyX" id="pY4-4p-8zm"/>
                                     <outlet property="seatNameLabel" destination="kCa-L6-2Oy" id="iqg-8s-iSf"/>
-                                    <segue destination="luK-dY-6gu" kind="show" id="f5R-r5-UKC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -295,10 +322,11 @@
         <scene sceneID="N59-JK-8qm">
             <objects>
                 <navigationController id="G4Z-OU-Ykc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="All Seats" id="CYm-MV-1sn"/>
+                    <tabBarItem key="tabBarItem" title="All Seats" image="list_icon" id="CYm-MV-1sn"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fbG-Wz-h4K">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.31290843930000001" green="0.9828227491" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="TNp-t4-Z49" kind="relationship" relationship="rootViewController" id="jfm-0B-J25"/>
@@ -309,4 +337,10 @@
             <point key="canvasLocation" x="1710" y="666"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list_icon" width="26" height="16"/>
+        <image name="map_icon" width="12" height="20"/>
+        <image name="my_list_icon" width="22" height="27"/>
+        <image name="plus" width="36" height="35"/>
+    </resources>
 </document>
